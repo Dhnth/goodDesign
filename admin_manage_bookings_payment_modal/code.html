@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>MotoRent Operations</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","background":"#faf8ff","on-secondary-fixed":"#001d31","tertiary-fixed":"#ffdad7","primary-fixed-dim":"#68dba9","surface-container-highest":"#dae2fd","on-error-container":"#93000a","on-surface-variant":"#3d4a42","inverse-on-surface":"#eef0ff","error-container":"#ffdad6","inverse-surface":"#283044","tertiary-fixed-dim":"#ffb3ae","on-tertiary-fixed":"#410004","on-error":"#ffffff","primary-fixed":"#85f8c4","surface-variant":"#dae2fd","on-primary":"#ffffff","on-background":"#131b2e","on-primary-container":"#f5fff7","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#005137","primary-container":"#00855d","on-tertiary-fixed-variant":"#7f2928","on-tertiary-container":"#fffbff","surface-container-lowest":"#ffffff","tertiary":"#9b3e3b","tertiary-container":"#ba5551","outline-variant":"#bccac0","surface-bright":"#faf8ff","on-surface":"#131b2e","outline":"#6d7a72","on-primary-fixed":"#002114","surface-container-high":"#e2e7ff","secondary-container":"#5bb8fe","surface-tint":"#006c4a","primary":"#006948","on-secondary":"#ffffff","on-secondary-fixed-variant":"#004b73","on-secondary-container":"#00476e","secondary-fixed":"#cce5ff","secondary-fixed-dim":"#93ccff","secondary":"#006398","inverse-primary":"#68dba9","error":"#ba1a1a","surface-container":"#eaedff","on-tertiary":"#ffffff","surface":"#faf8ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","gutter-sm":"1rem","gutter":"1.5rem","space-xl":"2rem","margin-sm":"1rem","space-md":"1rem","space-lg":"1.5rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},fontSize:{"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-xl-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-5"><div class="flex flex-col gap-6"><div class="px-6 flex items-center gap-3"><img alt="MotoRent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCS3erKdrCsLtAwTXafoGxpMzuhwTN4SWsBAtwW-8_XgDRLD4myj5Mez2_Qhhhm1c7nmktDrUY62WDtGUI8s-Y2laB_O4PR-TcxYWZBr-_rntZVnQOxRks9kViP86e7_1Z1KHetKq8EOLHmwfnV-_w7NeE_85aX8rOf12uWlOA3htNT4kQSQKq-HUzjOcUkgGnobr3VsH9lAw-dVvv43BsuMADyVLQiAaEn5OW5fsPZSg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">MotoRent</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Workspace</span></div></div><div class="px-4"><div class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-3 mb-2 font-bold">Admin Console</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="verify-motors" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Verify Motors</a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 transition-all bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="manage-bookings" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span>Manage Bookings</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="platform-reports" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span>Reports</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="admin-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="px-4 pt-3"><div class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-3 mb-2 font-bold">Pemilik Portal</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="owner-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Owner Home</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="my-motors" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span>My Motors</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="revenue-report" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span>Revenue Report</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="earnings-payout" href="#"><span class="material-symbols-outlined text-[20px]">payments</span>Earnings Payout</a></nav></div></div><div class="px-4"><div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Admin Superuser</span><span class="font-label-sm text-label-sm text-outline">System Admin</span></div></div><a class="text-on-surface-variant hover:text-error transition-colors p-1" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-xl text-label-sm font-label-sm"><span class="text-outline px-2 text-label-sm font-label-sm">Switch Role:</span><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse-motors" href="#">Penyewa (Customer)</a><a class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-bold" data-path="admin-dashboard" href="#">Admin (Platform)</a><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="owner-dashboard" href="#">Pemilik (Owner)</a></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm font-bold"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Admin Superuser</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/></div></header><main class="w-full pt-16 px-8 bg-surface min-h-screen"><div class="flex flex-col w-full pb-16 relative">
+<!-- Top Stat Cards & Operational Pulse -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Today's Check-ins</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">28</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span> +14%
+          </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">key</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Pending Desk Collection</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-tertiary font-bold">6</span>
+<span class="font-label-sm text-label-sm text-outline">Rp 4.850.000</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">point_of_sale</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Active Trips</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">42</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">92% Utilized</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">two_wheeler</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mb-1">Settled Today</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">Rp 18.2M</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+</div>
+</div>
+<!-- Table Toolbar & Filter Bar -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 w-full md:w-auto flex-1 max-w-lg">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-xl text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search by Booking ID, customer name, plate number..." type="text" value="Dimas Pratama"/>
+</div>
+</div>
+<div class="flex items-center gap-2.5 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
+<div class="flex items-center bg-surface-container-low rounded-xl p-1 text-label-sm font-label-sm">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-semibold shadow-xs">All Bookings (68)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface">Needs Desk Payment (6)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface">Active Run (42)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface">Completed</button>
+</div>
+<button class="p-2.5 bg-surface-container-low hover:bg-surface-container-high rounded-xl text-on-surface-variant flex items-center gap-1.5 text-label-md font-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+      </button>
+<button class="p-2.5 bg-surface-container-low hover:bg-surface-container-high rounded-xl text-on-surface-variant flex items-center gap-1.5 text-label-md font-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">file_download</span> Export
+      </button>
+</div>
+</div>
+<!-- Background Data Table: Incoming Customer Bookings -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-6">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3.5 px-5">Booking ID</th>
+<th class="py-3.5 px-5">Customer Name</th>
+<th class="py-3.5 px-5">Motor Unit</th>
+<th class="py-3.5 px-5">Rental Period</th>
+<th class="py-3.5 px-5">Total Amount</th>
+<th class="py-3.5 px-5">Payment Status</th>
+<th class="py-3.5 px-5 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm text-on-surface">
+<!-- Row 1 (Target Active Row) -->
+<tr class="bg-primary/5 transition-colors">
+<td class="py-4 px-5 font-semibold text-primary font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">bookmark</span>
+                #INV-8842
+              </div>
+<span class="text-label-sm font-label-sm text-outline pl-6">MR-2024-8842</span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-label-md">DP</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Dimas Pratama</span>
+<span class="text-label-sm font-label-sm text-outline">+62 812-9921-4401</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<img class="w-12 h-9 object-cover rounded-lg bg-surface-container-low" data-alt="Matte black Yamaha NMAX 155cc connected scooter parked in modern studio lighting, showcasing aerodynamic windshield, dual disc brakes, and wide touring seat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMcWBbu-LZiiB7gvCy1uitA363iiWkGeq1uHGuXY6ygBtPOr5dKgEjSk-f-TicDo5n2udPG9QWFHpx08q0Se9cT51cmqnhTiZ-q3myCAoZKk0-6ZIRZioQzWCqd_LiLxiSjf2Bw8n_GNeoJC6haDBIHlC7-p6dIyMVRIA3dvl8aCHNIH2FNBHvqBkdJhwTV8QwjLE7ECFdabUEy6N3THgqS5aSl3DF38_6eZLTphGo"/>
+<div class="flex flex-col">
+<span class="font-semibold">Yamaha NMAX 155cc</span>
+<span class="text-label-sm font-label-sm text-outline">B 4192 SXE • 2023 ABS</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex flex-col">
+<span class="font-semibold">Oct 24 - Oct 31, 2024</span>
+<span class="text-label-sm font-label-sm text-outline">7 Days Duration</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="font-bold text-on-surface font-label-lg text-label-lg">Rp 1.016.000</span>
+<span class="block text-label-sm font-label-sm text-outline">Daily: Rp 140k + Deposit</span>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                Pending Desk Payment
+              </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-bold shadow-sm shadow-primary/20 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+                Process Payment
+              </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-5 font-semibold text-on-surface font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">bookmark_border</span>
+                #INV-8840
+              </div>
+<span class="text-label-sm font-label-sm text-outline pl-6">MR-2024-8840</span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-label-md">SJ</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Sarah Jenkins</span>
+<span class="text-label-sm font-label-sm text-outline">+1 (415) 890-2134</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<img class="w-12 h-9 object-cover rounded-lg bg-surface-container-low" data-alt="Retro pastel green Vespa Sprint 150 i-get scooter parked in an immaculate minimalist showroom with soft diffused daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBurWI5bbt2P5Ngnh_dtHfhO7RXHo9X4XaEqSSV55_uaFkVEtWrs8SAWvAnWaw_7PuSC7K1Y0G437s8NAS7updBnzT1NctwpUd1qlULVkEfR4Mk09bLn0fAljTHjmhKkvI-h8Otdmg4tOqNZ-gyuqnWDcXXMNJs84tMjOBcYa0vWRpnK36yGhaQYwWQBq9qypfrMkrIZtYRtnPc92JRh95Zn0HI3m0WQjeN48klNCWZ"/>
+<div class="flex flex-col">
+<span class="font-semibold">Vespa Sprint 150</span>
+<span class="text-label-sm font-label-sm text-outline">DK 3021 VSP • Classic</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex flex-col">
+<span class="font-semibold">Oct 23 - Oct 26, 2024</span>
+<span class="text-label-sm font-label-sm text-outline">3 Days Duration</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="font-bold text-on-surface font-label-lg text-label-lg">Rp 840.000</span>
+<span class="block text-label-sm font-label-sm text-outline">Instant Online Paid</span>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Paid (Midtrans)
+              </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-surface-container-low text-on-surface-variant hover:text-on-surface rounded-xl font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                View Receipt
+              </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-5 font-semibold text-on-surface font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">bookmark_border</span>
+                #INV-8839
+              </div>
+<span class="text-label-sm font-label-sm text-outline pl-6">MR-2024-8839</span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-label-md">RH</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Rian Hidayat</span>
+<span class="text-label-sm font-label-sm text-outline">+62 878-1123-9088</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<img class="w-12 h-9 object-cover rounded-lg bg-surface-container-low" data-alt="Glossy red Honda PCX 160 modern urban scooter positioned cleanly in high contrast modern architectural garage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuiCwuXY42toO4baCRDuIV8HGQGL9CDv3nj4_rrkFcUjjGx7rg1Bc74jP1RiFzgAYOPFGydAalq-xglBL0QpbYNEmHO6wlTq-JjD_Cid8UjHR3Uw9tRh41nfzV_xJpfsCgRSQPRHqShzRAVMSA56BdHiu19rIHxUvuP1PiLd3HZ0Q3DvM0AW_BFaijeVEXt-Dh1EMD3Ntw9DmeWh9G7fCrcwkIZ9lujxLvypgtVx0O"/>
+<div class="flex flex-col">
+<span class="font-semibold">Honda PCX 160</span>
+<span class="text-label-sm font-label-sm text-outline">B 6689 PQR • Keyless</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex flex-col">
+<span class="font-semibold">Oct 24 - Oct 25, 2024</span>
+<span class="text-label-sm font-label-sm text-outline">1 Day Duration</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="font-bold text-on-surface font-label-lg text-label-lg">Rp 175.000</span>
+<span class="block text-label-sm font-label-sm text-outline">Pay at Desk Counter</span>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                Pending Desk Payment
+              </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-bold shadow-sm shadow-primary/20 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+                Process Payment
+              </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-5 font-semibold text-on-surface font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">bookmark_border</span>
+                #INV-8835
+              </div>
+<span class="text-label-sm font-label-sm text-outline pl-6">MR-2024-8835</span>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-label-md">AL</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Ayu Lestari</span>
+<span class="text-label-sm font-label-sm text-outline">+62 856-7788-1200</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex items-center gap-3">
+<img class="w-12 h-9 object-cover rounded-lg bg-surface-container-low" data-alt="Matte blue Yamaha Fazzio 125 hybrid commuter scooter in clean bright studio lighting with chrome mirrors and brown leather saddle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFCIWYu4QJGX1qj_uZMwtxxuTReQGZKNe8UnRjsWke5fSQ30oNBgcWIR-U6Pth9QNGGccdsZaNerz8xbotIjUjfkZM_AWlHtc15_qg_8xxmrCWBd4d3Iysyujro6PfJVHkLOBGpSi7gchXVmaXuZsk3FSs1qKiPflnZfrE9W582m5cHXY0-u8IcNOKRbKARpxCA6F9Tc1NuP0YfuU6Z2V_vAKMRKzowYZ-_6b0bHss"/>
+<div class="flex flex-col">
+<span class="font-semibold">Yamaha Fazzio 125</span>
+<span class="text-label-sm font-label-sm text-outline">B 3321 KZA • Hybrid</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-5">
+<div class="flex flex-col">
+<span class="font-semibold">Oct 20 - Oct 23, 2024</span>
+<span class="text-label-sm font-label-sm text-outline">Returned • Completed</span>
+</div>
+</td>
+<td class="py-4 px-5">
+<span class="font-bold text-on-surface font-label-lg text-label-lg">Rp 390.000</span>
+<span class="block text-label-sm font-label-sm text-outline">Paid via QRIS</span>
+</td>
+<td class="py-4 px-5">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Paid & Handed Over
+              </span>
+</td>
+<td class="py-4 px-5 text-right">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-surface-container-low text-on-surface-variant hover:text-on-surface rounded-xl font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                Audit Log
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Bottom Bar -->
+<div class="py-3 px-6 bg-surface-container-low flex items-center justify-between text-label-md font-label-md text-outline">
+<span>Showing 1 to 4 of 68 total incoming orders</span>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-on-surface font-bold">1</span>
+<button class="px-2.5 py-1 rounded-lg hover:bg-surface-container-high transition-colors">2</button>
+<button class="px-2.5 py-1 rounded-lg hover:bg-surface-container-high transition-colors">3</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ============================================================ -->
+<!-- CRITICAL OVERLAY: High-fidelity Payment Modal / Pop-up -->
+<!-- ============================================================ -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-on-background/40 backdrop-blur-md transition-all" id="payment-modal">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col transform transition-all duration-200">
+<!-- Modal Header -->
+<div class="px-6 py-5 bg-surface-container-low flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">point_of_sale</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Process Payment & Desk Check-in</h2>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-bold">Active Booking</span>
+<span class="font-label-sm text-label-sm text-outline">Order #INV-MR-2024-8842</span>
+</div>
+</div>
+</div>
+<button aria-label="Close dialog" class="p-2 rounded-xl text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="document.getElementById('payment-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-6 space-y-5 overflow-y-auto max-h-[calc(85vh-140px)]">
+<!-- 1. Customer & Booking Preview Card -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img class="w-16 h-14 object-cover rounded-xl bg-surface-container-lowest shadow-xs" data-alt="Close up frontal portrait of modern dark Yamaha NMAX scooter parked in sleek clean rental showroom with ambient studio green highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKOdCFPbG-6wijh1K1JGCK5m2qkBbsMaSFIAq5q2B5pTIV5xd1qhmGn_hFT3CQwAV1K_R9-eYJYG55UswTFsTSPgVfw4hYW1PhGoJUI22x9_c4bmzxYS864MQALPBNNaS6Z761vKqulUZpao4HGO6BW5YC3ffx67ptK5R7q1vyJ3UL56NHHSnyqNNT6RRrIWm8O5jxBiznH4wdVAsC8NJEnuHjg5QhEicJVI4H0MRo"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">Dimas Pratama</span>
+<span class="inline-flex items-center text-primary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span> Verified ID
+                </span>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant font-medium">Yamaha NMAX 155cc • Plat B 4192 SXE</span>
+<div class="flex items-center gap-3 text-label-sm font-label-sm text-outline mt-1">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_month</span> 7 Days (24 - 31 Oct)</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_gas_station</span> Fuel 100%</span>
+</div>
+</div>
+</div>
+<div class="text-right pl-4">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider block">Billing Total</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Rp 1.016.000</span>
+</div>
+</div>
+<!-- Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- 2. Dropdown for Payment Method -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Metode Pembayaran (Payment Method)</span>
+<span class="text-label-sm font-label-sm text-primary">Instant QRIS Ready</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 pl-10 pr-9 bg-surface-container-low rounded-xl text-body-sm font-body-sm text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option selected="" value="qris">E-Money / QRIS (BCA, Mandiri, GoPay)</option>
+<option value="cash">Cash (Tunai di Kasir Desk)</option>
+<option value="edc">Debit / Credit Card (EDC Terminal)</option>
+<option value="transfer">Direct Bank Transfer (Manual Check)</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">qr_code_scanner</span>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- 3. Dropdown for Transaction Type -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Tipe Transaksi (Transaction Type)
+            </label>
+<div class="relative">
+<select class="w-full h-11 pl-10 pr-9 bg-surface-container-low rounded-xl text-body-sm font-body-sm text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option selected="" value="sewa">Sewa (Rental Payment & Deposit)</option>
+<option value="denda_late">Denda Keterlambatan (Late Fee)</option>
+<option value="denda_rusak">Denda Kerusakan / Helm Hilang (Penalty)</option>
+<option value="extension">Perpanjangan Sewa (Rental Extension)</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">category</span>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- 4. Input for Total Amount with Quick Presets -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Jumlah Diterima (Amount Received)
+            </label>
+<span class="text-label-sm font-label-sm text-outline">Status: Menunggu Pembayaran</span>
+</div>
+<div class="relative">
+<div class="absolute left-3.5 top-1/2 -translate-y-1/2 font-bold text-on-surface text-body-md font-body-md">Rp</div>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-low rounded-xl text-headline-sm font-headline-sm font-bold text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/30" id="amount-input" type="text" value="1.016.000"/>
+</div>
+<!-- Quick Payment Shortcut Pills -->
+<div class="flex items-center gap-2 pt-1 flex-wrap">
+<span class="text-label-sm font-label-sm text-outline mr-1">Quick Select:</span>
+<button class="px-2.5 py-1 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 text-label-sm font-label-sm font-bold transition-all" onclick="document.getElementById('amount-input').value = '1.016.000'" type="button">
+              Uang Pas (Rp 1.016.000)
+            </button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm font-medium transition-all" onclick="document.getElementById('amount-input').value = '1.050.000'" type="button">
+              +Rp 50.000 (Rp 1.066.000)
+            </button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm font-medium transition-all" onclick="document.getElementById('amount-input').value = '1.100.000'" type="button">
+              +Rp 100.000 (Rp 1.116.000)
+            </button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm font-medium transition-all" onclick="document.getElementById('amount-input').value = '1.020.000'" type="button">
+              Round to 1.020.000
+            </button>
+</div>
+</div>
+<!-- 5. Staff Notes & Check-in Checklist -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Catatan Petugas Kasir (Staff Operational Notes)</span>
+<span class="text-label-sm font-label-sm text-outline">Mandatory for Handover</span>
+</label>
+<div class="relative">
+<textarea class="w-full p-3 pl-10 bg-surface-container-low rounded-xl text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none" rows="2">Unit checked, helmet SNI 2x handed, fuel level 100% full.</textarea>
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-[20px]">edit_note</span>
+</div>
+</div>
+<!-- Checkbox Acknowledgement -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-primary/20" id="deposit-receipt" type="checkbox"/>
+<label class="text-label-sm font-label-sm text-on-surface cursor-pointer select-none" for="deposit-receipt">
+            Cetak Struk Resmi & Kirimkan WhatsApp E-Kwitansi ke <span class="font-bold">+62 812-9921-4401</span> secara otomatis.
+          </label>
+</div>
+</div>
+<!-- Modal Footer Action Buttons -->
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-[18px] text-primary">security</span>
+<span>Encrypted Desk Check-in Ledger</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-xl font-label-md text-label-md font-semibold transition-all" onclick="document.getElementById('payment-modal').classList.add('hidden')" type="button">
+            Cancel / Close
+          </button>
+<button class="px-6 py-2.5 bg-primary text-on-primary rounded-xl font-label-md text-label-md font-bold shadow-md shadow-primary/30 hover:bg-primary-container active:scale-[0.98] transition-all flex items-center gap-2" onclick="alert('Payment confirmed for Dimas Pratama! Unit marked as Handed Over.'); document.getElementById('payment-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+            Confirm Payment (Konfirmasi)
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Re-open modal function for interactive demo
+  window.reopenPaymentModal = function() {
+    const modal = document.getElementById('payment-modal');
+    if (modal) modal.classList.remove('hidden');
+  };
+
+  // Wire up action buttons in table rows to trigger modal
+  document.addEventListener('DOMContentLoaded', () => {
+    const processButtons = document.querySelectorAll('button:has(span:contains("payments"))');
+    processButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.reopenPaymentModal();
+      });
+    });
+  });
+</script></main></div></body></html>

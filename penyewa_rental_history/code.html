@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>MotoRent</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","background":"#faf8ff","on-secondary-fixed":"#001d31","tertiary-fixed":"#ffdad7","primary-fixed-dim":"#68dba9","surface-container-highest":"#dae2fd","on-error-container":"#93000a","on-surface-variant":"#3d4a42","inverse-on-surface":"#eef0ff","error-container":"#ffdad6","inverse-surface":"#283044","tertiary-fixed-dim":"#ffb3ae","on-tertiary-fixed":"#410004","on-error":"#ffffff","primary-fixed":"#85f8c4","surface-variant":"#dae2fd","on-primary":"#ffffff","on-background":"#131b2e","on-primary-container":"#f5fff7","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#005137","primary-container":"#00855d","on-tertiary-fixed-variant":"#7f2928","on-tertiary-container":"#fffbff","surface-container-lowest":"#ffffff","tertiary":"#9b3e3b","tertiary-container":"#ba5551","outline-variant":"#bccac0","surface-bright":"#faf8ff","on-surface":"#131b2e","outline":"#6d7a72","on-primary-fixed":"#002114","surface-container-high":"#e2e7ff","secondary-container":"#5bb8fe","surface-tint":"#006c4a","primary":"#006948","on-secondary":"#ffffff","on-secondary-fixed-variant":"#004b73","on-secondary-container":"#00476e","secondary-fixed":"#cce5ff","secondary-fixed-dim":"#93ccff","secondary":"#006398","inverse-primary":"#68dba9","error":"#ba1a1a","surface-container":"#eaedff","on-tertiary":"#ffffff","surface":"#faf8ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","gutter-sm":"1rem","gutter":"1.5rem","space-xl":"2rem","margin-sm":"1rem","space-md":"1rem","space-lg":"1.5rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},fontSize:{"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-xl-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-6"><a class="flex items-center gap-3" data-path="browse-motors" href="#"><img alt="MotoRent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCS3erKdrCsLtAwTXafoGxpMzuhwTN4SWsBAtwW-8_XgDRLD4myj5Mez2_Qhhhm1c7nmktDrUY62WDtGUI8s-Y2laB_O4PR-TcxYWZBr-_rntZVnQOxRks9kViP86e7_1Z1KHetKq8EOLHmwfnV-_w7NeE_85aX8rOf12uWlOA3htNT4kQSQKq-HUzjOcUkgGnobr3VsH9lAw-dVvv43BsuMADyVLQiAaEn5OW5fsPZSg"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">MotoRent</span></a><nav class="hidden md:flex items-center gap-6" data-active-classes="text-primary font-label-lg"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse-motors" href="#">Browse Motors</a><a aria-current="page" class="transition-colors text-primary font-label-lg" data-path="my-bookings" href="#">My Bookings / History</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="rental-guidelines" href="#">Rental Guidelines</a></nav></div><div class="flex items-center gap-4"><div class="hidden lg:flex items-center bg-surface-container-low px-3 py-1.5 rounded-xl text-on-surface-variant"><span class="material-symbols-outlined text-outline mr-2 text-[20px]">search</span><input class="bg-transparent border-0 outline-none text-body-sm font-body-sm text-on-surface placeholder:text-outline w-56" placeholder="Search city, scooter, adventure..." type="text"/></div><div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-xl text-label-sm font-label-sm"><a class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-bold" data-path="browse-motors" href="#">Penyewa</a><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-dashboard" href="#">Admin</a><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="owner-dashboard" href="#">Pemilik</a></div><button aria-label="Notifications" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col items-end hidden sm:flex"><span class="font-label-md text-label-md text-on-surface">Budi Santoso</span><span class="font-label-sm text-label-sm text-primary font-semibold">Penyewa</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Content Area Wrapper -->
+<div class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-8 space-y-8">
+<!-- Top Greeting & Header Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider bg-surface-container-high px-2.5 py-0.5 rounded-full">Customer Portal</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: #CUST-99201</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Rental History & Bookings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Track active rides, station handover instructions, and digital invoices.</p>
+</div>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary px-5 py-2.5 rounded-xl font-label-lg text-label-lg transition-all shadow-sm active:scale-95" data-path="browse-motors" href="#">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+          Book Another Ride
+        </a>
+</div>
+</div>
+<!-- Summary Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Active Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">Active Rentals</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">1</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block animate-pulse"></span> On Road
+            </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">two_wheeler</span>
+</div>
+</div>
+<!-- Completed Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">Completed Trips</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">4</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> Verified Safe
+            </span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+</div>
+<!-- Cancelled / Refunded Card -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">Cancelled / Refunded</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">0</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">100% Reliability</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[26px]">remove_done</span>
+</div>
+</div>
+</div>
+<!-- Active Telematics Live Status Banner (Highlight for Current Trip) -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="flex items-start sm:items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex-shrink-0 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                Active Journey Live Telematics
+              </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant hidden sm:inline">• Honda Scoopy (INV-9021)</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Return Due in 6 Hours (Today, 18:00 WIB)</div>
+</div>
+</div>
+<!-- Telematics Gauge Bar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 lg:min-w-[420px]">
+<div class="flex-1 bg-surface-container-low p-3 rounded-lg flex flex-col justify-center">
+<div class="flex justify-between items-center text-label-sm font-label-sm mb-1.5">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">local_gas_station</span> Fuel Tank Level
+              </span>
+<span class="text-primary font-bold">85% Full</span>
+</div>
+<!-- Progress Pill -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary-container rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg px-4 py-2.5 rounded-xl transition-colors shadow-sm whitespace-nowrap flex items-center justify-center gap-1.5" onclick="openModal('extendModal')">
+<span class="material-symbols-outlined text-[18px]">more_time</span>
+            Extend Rental
+          </button>
+</div>
+</div>
+</div>
+<!-- Filter Navigation Tabs & Search Controls -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<!-- Tabs -->
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low self-start">
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all" onclick="filterRentals('all', this)">
+          All Bookings (4)
+        </button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-semibold transition-all" onclick="filterRentals('active', this)">
+          Active (1)
+        </button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-semibold transition-all" onclick="filterRentals('pending', this)">
+          Pending (1)
+        </button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-semibold transition-all" onclick="filterRentals('completed', this)">
+          Completed (2)
+        </button>
+</div>
+<!-- Quick Search / Sort -->
+<div class="flex items-center gap-2">
+<div class="relative">
+<input class="w-full sm:w-64 bg-surface-container-lowest text-body-sm font-body-sm text-on-surface placeholder:text-outline rounded-xl pl-9 pr-3 py-2 outline-none focus:ring-2 focus:ring-primary shadow-sm" id="searchInput" onkeyup="searchRentals()" placeholder="Search invoice, model..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-[18px]">search</span>
+</div>
+<button class="bg-surface-container-lowest text-on-surface-variant hover:text-on-surface p-2 rounded-xl shadow-sm flex items-center justify-center" title="Filter options">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Rental History Cards Container -->
+<div class="space-y-4" id="rentalsList">
+<!-- CARD 1: ACTIVE RENTAL (Honda Scoopy) -->
+<div class="rental-card bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200" data-category="active" data-search="honda scoopy 110cc prestige inv-9021">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<!-- Motorcycle Info & Image -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 flex-1 min-w-0">
+<div class="w-full sm:w-36 h-28 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A modern stylish matte Honda Scoopy 110cc scooter parked on a clean sunlit asphalt in Bali, studio-grade natural lighting, emerald brand undertones, sharp side profile, hyper-realistic automotive photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHc3b0bVUNTFQDdEvQ4qeZUgNi9kdUWsGV0xYoysDYMjaC7WhDkA1QuASW7GNerybgMZ4dgBZ-4pQl8pXl_CdOGCiN6dk57LGFW_ECXGtmVdgMGbOmdO3zv5FwdlDdxHbh83JOmPMGtawawNMgCe5Ea8VSc8-QqN3fZMIcp_0gLHuGzMe-Ej8Dvrro-utw6D97gd43eQkPqKhK09KYcLQvQ2v8_IqfOpPrZZuQFBw4"/>
+<span class="absolute bottom-1.5 left-1.5 bg-on-surface/80 text-surface text-label-sm font-label-sm px-1.5 py-0.5 rounded">110 CC</span>
+</div>
+<div class="space-y-1.5 min-w-0 flex-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Honda Scoopy 110cc Prestige</span>
+<!-- Status Badge Sky Blue -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                  Rented / In Use
+                </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-mono text-label-md text-primary font-semibold">#INV-9021</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  20 Oct – 23 Oct 2024
+                </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+                  Due in 6 Hours
+                </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline flex items-center gap-2 pt-0.5">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                Pickup: Seminyak Central Hub • Automatic Transmission
+              </div>
+</div>
+</div>
+<!-- Price & Actions Group -->
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-surface-container gap-3 flex-shrink-0">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total Rental Fee</span>
+<div class="flex items-baseline lg:justify-end gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rp 375.000</span>
+<span class="font-label-sm text-label-sm text-outline">/ 3 days</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center lg:justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">credit_card</span> Paid via QRIS
+              </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-xl font-label-md text-label-md transition-colors flex items-center gap-1.5" onclick="openModal('telematicsModal')" title="Live status tracking">
+<span class="material-symbols-outlined text-[16px]">sensors</span> Telematics
+              </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2 rounded-xl font-label-md text-label-md transition-colors shadow-sm flex items-center gap-1.5" onclick="openModal('extendModal')">
+<span class="material-symbols-outlined text-[16px]">more_time</span> Extend Rental
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: PENDING CONFIRMATION (Yamaha NMAX) -->
+<div class="rental-card bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200" data-category="pending" data-search="yamaha nmax 155cc inv-8842">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<!-- Motorcycle Info & Image -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 flex-1 min-w-0">
+<div class="w-full sm:w-36 h-28 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A sleek dark gray Yamaha NMAX 155cc maxi-scooter photographed in a high-tech modern garage showroom, crisp reflections, minimalist composition, soft overhead studio lighting, sharp vehicle details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Nb_2CKSaH8WEiCuNFwictCxpCAWbIuzdIxgTiSdS66lYFgNnNHS9hDdwXmzZ3z-ZklyWLkZ_R5HShc4YNyb1n-2OYRePr08vsX5WpHyi3UrdKM8DSfW_cma4tpXaC2MVvTnjoAmNrZWwHFx7Nm8u-aw10UceEUFrcOUDuQY2d5KfxJdMGldQIsB5DRcumDi8i4CcEyk1dqvD_RFTxxEfL_lVgO5S6ZFIaVsbigZz"/>
+<span class="absolute bottom-1.5 left-1.5 bg-on-surface/80 text-surface text-label-sm font-label-sm px-1.5 py-0.5 rounded">155 CC</span>
+</div>
+<div class="space-y-1.5 min-w-0 flex-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Yamaha NMAX 155cc ABS</span>
+<!-- Status Badge Amber -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+                  Pending Confirmation
+                </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-mono text-label-md text-primary font-semibold">#INV-8842</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  24 Oct – 31 Oct 2024
+                </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+                  Awaiting Station Acceptance
+                </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline flex items-center gap-2 pt-0.5">
+<span class="material-symbols-outlined text-[16px]">store</span>
+                Station: Canggu Beach Depot • Includes 2 Helmets & Raincoat
+              </div>
+</div>
+</div>
+<!-- Price & Actions Group -->
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-surface-container gap-3 flex-shrink-0">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Deposit + Total Cost</span>
+<div class="flex items-baseline lg:justify-end gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rp 1.050.000</span>
+<span class="font-label-sm text-label-sm text-outline">/ 7 days</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center lg:justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">account_balance</span> Bank Transfer (BCA VA)
+              </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-xl font-label-md text-label-md transition-colors flex items-center gap-1.5" onclick="openModal('invoiceModal')">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span> View Invoice
+              </button>
+<button class="bg-surface-container-highest hover:bg-surface-container-high text-on-surface px-4 py-2 rounded-xl font-label-md text-label-md transition-colors flex items-center gap-1.5" onclick="openModal('stationModal')">
+<span class="material-symbols-outlined text-[16px] text-primary">near_me</span> Directions to Station
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: COMPLETED (Honda Vario 160cc CBS) -->
+<div class="rental-card bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200" data-category="completed" data-search="honda vario 160cc cbs inv-7731">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<!-- Motorcycle Info & Image -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 flex-1 min-w-0">
+<div class="w-full sm:w-36 h-28 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A modern glossy black Honda Vario 160cc motorcycle parked outdoors in front of a contemporary architectural building in Jakarta, clean design lines, high resolution editorial quality, urban commuting aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhpCyKziA4FvP7WYZaQMaNgu_CBMN28nWSi95v_lBbMDK16seGSAzi1zaNF7Dus_9kawEPZ5Ex69gjvP95iccnChx7f-JG0Acn98bdxERFI_jcQrTlfIGMvJLSKElDgkxfI6AcWXxtZ5_bELhmKTLhufMFfs3vHtcAB9q564QQ21u_Rp1VkrsrfW91V49DxvtYPDgtod28aAP7E5yOWw7ua15WMMZ-iC8qU9h8J6KG"/>
+<span class="absolute bottom-1.5 left-1.5 bg-on-surface/80 text-surface text-label-sm font-label-sm px-1.5 py-0.5 rounded">160 CC</span>
+</div>
+<div class="space-y-1.5 min-w-0 flex-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Honda Vario 160cc CBS</span>
+<!-- Status Badge Emerald Green -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Completed
+                </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-mono text-label-md text-primary font-semibold">#INV-7731</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  10 Sep – 17 Sep 2024
+                </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+                  Returned & Inspected
+                </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline flex items-center gap-2 pt-0.5">
+<span class="material-symbols-outlined text-[16px]">swap_calls</span>
+                Total Distance: 312 km • Station: Kuta Central Point
+              </div>
+</div>
+</div>
+<!-- Price & Actions Group -->
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-surface-container gap-3 flex-shrink-0">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Settled Total</span>
+<div class="flex items-baseline lg:justify-end gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rp 840.000</span>
+<span class="font-label-sm text-label-sm text-outline">/ 7 days</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center lg:justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Deposit Refunded
+              </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-xl font-label-md text-label-md transition-colors flex items-center gap-1.5" onclick="openModal('receiptModal')">
+<span class="material-symbols-outlined text-[16px]">download</span> Receipt
+              </button>
+<a class="bg-primary hover:bg-primary-container text-on-primary px-4 py-2 rounded-xl font-label-md text-label-md transition-colors shadow-sm flex items-center gap-1.5" data-path="browse-motors" href="#">
+<span class="material-symbols-outlined text-[16px]">autorenew</span> Rent Again
+              </a>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 4: COMPLETED WITH REVIEW (Vespa Primavera 150cc) -->
+<div class="rental-card bg-surface-container-lowest rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200" data-category="completed" data-search="vespa primavera 150cc inv-6610">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<!-- Motorcycle Info & Image -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 flex-1 min-w-0">
+<div class="w-full sm:w-36 h-28 rounded-xl overflow-hidden bg-surface-container flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="An elegant pastel mint-green Vespa Primavera 150cc parked beside a boutique cafe in Ubud Bali, warm tropical sunlight, pristine Italian scooter detailing, high-end lifestyle travel aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLhiP7zyHAyimGvUsmCd7TaVeyw_F629adpHKx6_bvyfOe5WPBy0-JpvHCdOjsSSIE7XpGtTZdV-V4vIFVo7OAjzrhjO8FM7Bi8NGyO-Fjzn4yqA9-UX0mPhiFvXjrBNOkqyoWchMkQywhBDYhU_fW6Gtqfgd_prNWKsrdTwQAns3eGvK2Tsyu8g77Jq7p4MLFruMAbi9oxmK5x2jzwZGfwB-D1oXCg8D8iE5KytJ"/>
+<span class="absolute bottom-1.5 left-1.5 bg-on-surface/80 text-surface text-label-sm font-label-sm px-1.5 py-0.5 rounded">150 CC</span>
+</div>
+<div class="space-y-1.5 min-w-0 flex-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Vespa Primavera 150cc i-Get</span>
+<!-- Status Badge Emerald Green -->
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-fixed text-on-primary-fixed">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Completed
+                </span>
+<!-- Star Rating Badge -->
+<span class="inline-flex items-center gap-1 bg-surface-container px-2.5 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface font-bold">
+<span class="material-symbols-outlined text-[14px] text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+                  5.0 • Reviewed
+                </span>
+</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-mono text-label-md text-primary font-semibold">#INV-6610</span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                  12 Aug – 15 Aug 2024
+                </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+                  Full Coverage Insurance
+                </span>
+</div>
+<div class="text-body-sm font-body-sm text-outline flex items-center gap-2 pt-0.5">
+<span class="material-symbols-outlined text-[16px]">rate_review</span>
+<span class="italic text-on-surface-variant">“Smooth ride around Ubud hills, bike was spotless and fuel full!”</span>
+</div>
+</div>
+</div>
+<!-- Price & Actions Group -->
+<div class="flex flex-row lg:flex-col items-center lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-surface-container gap-3 flex-shrink-0">
+<div class="text-left lg:text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Settled Total</span>
+<div class="flex items-baseline lg:justify-end gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Rp 650.000</span>
+<span class="font-label-sm text-label-sm text-outline">/ 3 days</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center lg:justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">credit_score</span> Master/Visa • Done
+              </span>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 rounded-xl font-label-md text-label-md transition-colors flex items-center gap-1.5" onclick="openModal('receiptModal')">
+<span class="material-symbols-outlined text-[16px]">download</span> Receipt
+              </button>
+<a class="bg-surface-container-high hover:bg-surface-container text-primary font-semibold px-4 py-2 rounded-xl font-label-md text-label-md transition-colors flex items-center gap-1.5" data-path="browse-motors" href="#">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span> Book Similar
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State helper (hidden by default) -->
+<div class="hidden bg-surface-container-lowest p-12 rounded-xl text-center shadow-sm" id="noResults">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mx-auto text-outline mb-4">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No bookings found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Try switching to a different filter tab or clearing your search term.</p>
+<button class="mt-4 px-4 py-2 rounded-xl bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="resetFilters()">
+        Reset All Filters
+      </button>
+</div>
+<!-- Support and Help Card -->
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Need help with an ongoing ride?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our road assistance dispatch is on standby 24/7 across Bali and Jakarta regions.</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-lowest hover:bg-surface text-on-surface font-label-md text-label-md px-4 py-2.5 rounded-xl shadow-sm transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          WhatsApp Dispatch
+        </button>
+<button class="bg-error-container text-on-error-container hover:opacity-90 font-label-md text-label-md px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+          SOS Emergency
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: DIRECTIONS TO STATION -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-4" id="stationModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-6 shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">pin_drop</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Station Directions</h3>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg" onclick="closeModal('stationModal')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+        Pickup for <strong>Yamaha NMAX (INV-8842)</strong> on 24 Oct 2024 at 09:00 WIB.
+      </p>
+<!-- Interactive / Visual Map Container -->
+<div class="w-full h-48 bg-cover bg-center rounded-xl relative overflow-hidden" data-location="Canggu, Bali, Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJy9dvAMawR82aCpTrUdedJPm3voKa9J6f8tXcYj9K4UgZN-BdkZKrtkxEzsqnWAEN7QpsYci3P5hV9Z4nK3nfjPmwSXtKUD9xF3_kerGzJmUI0tMeSXFp9BOZYILYaiC2C5rdK2yuxJ1n0QrBgwBf9pWHzBHz_OLCfQM2wrhpbOhobaO9x2EDEhXSpbXyQhvpVSexn2fKg7dKtZxuLsUSp2NDEmNlXXyX5ppgljdD')">
+<div class="absolute inset-0 bg-inverse-surface/20 flex items-center justify-center">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">store</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">MotoRent Canggu Beach Hub</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg text-body-sm font-body-sm text-on-surface space-y-1">
+<div class="font-semibold text-primary">Station Address:</div>
+<div>Jl. Pantai Batu Bolong No. 42B, Canggu, Kuta Utara, Badung, Bali 80361</div>
+<div class="text-label-sm text-outline pt-1">Station Contact: +62 812-3456-7890 (Pak Wayan)</div>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl text-on-surface font-label-md hover:bg-surface-container transition-colors" onclick="closeModal('stationModal')">
+          Close
+        </button>
+<a class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md flex items-center gap-1.5 transition-colors" href="https://maps.google.com" target="_blank">
+<span class="material-symbols-outlined text-[16px]">navigation</span> Open Google Maps
+        </a>
+</div>
+</div>
+</div>
+<!-- MODAL: VIEW INVOICE -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-4" id="invoiceModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-6 shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Proforma Invoice</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Invoice #INV-8842</h3>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg" onclick="closeModal('invoiceModal')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-3 pt-2 text-body-sm font-body-sm">
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Motorcycle</span>
+<span class="font-semibold text-on-surface">Yamaha NMAX 155cc</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Duration</span>
+<span class="font-semibold text-on-surface">7 Days (24 - 31 Oct)</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Daily Rate (Rp 150.000 x 7)</span>
+<span class="text-on-surface font-mono">Rp 1.050.000</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Security Deposit (Refundable)</span>
+<span class="text-on-surface font-mono">Rp 500.000</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Platform Admin Fee</span>
+<span class="text-primary font-semibold">FREE (Promo)</span>
+</div>
+<div class="flex justify-between py-2 text-headline-sm font-headline-sm text-on-surface">
+<span>Grand Total</span>
+<span class="text-primary font-bold">Rp 1.550.000</span>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl text-on-surface font-label-md hover:bg-surface-container" onclick="closeModal('invoiceModal')">Close</button>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md flex items-center gap-1.5" onclick="alert('Downloading PDF Invoice #INV-8842...')">
+<span class="material-symbols-outlined text-[16px]">download</span> Download PDF
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: RECEIPT (SETTLED) -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-4" id="receiptModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-6 shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Official Payment Receipt</h3>
+<span class="font-label-sm text-label-sm text-outline">Status: Paid in Full • Inspected</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg" onclick="closeModal('receiptModal')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Transaction Ref:</span>
+<span class="font-mono text-on-surface font-semibold">TRX-2024-MTR-9821</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Date Settled:</span>
+<span class="text-on-surface">17 Sep 2024, 14:32 WIB</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Payment Gateway:</span>
+<span class="text-on-surface">BCA Virtual Account</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Deposit Status:</span>
+<span class="text-primary font-semibold">Returned to BCA (Rp 500.000)</span>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl text-on-surface font-label-md hover:bg-surface-container" onclick="closeModal('receiptModal')">Close</button>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md flex items-center gap-1.5" onclick="alert('Downloading Official Tax Receipt PDF...')">
+<span class="material-symbols-outlined text-[16px]">print</span> Print / Save
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: EXTEND RENTAL -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-4" id="extendModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-6 shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">more_time</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Extend Your Rental</h3>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg" onclick="closeModal('extendModal')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+        Current vehicle: <strong>Honda Scoopy (INV-9021)</strong>. Extends your return deadline seamlessly without returning to the hub.
+      </p>
+<div class="space-y-3">
+<label class="block text-label-md font-label-md text-on-surface">Select Additional Duration</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="ext-btn p-3 rounded-xl border border-outline-variant bg-surface-container-low text-center active hover:bg-surface-container transition-all" onclick="selectExtension(1, 125000, this)" type="button">
+<span class="block font-headline-sm text-headline-sm text-on-surface">+1 Day</span>
+<span class="text-label-sm text-on-surface-variant font-mono">Rp 125.000</span>
+</button>
+<button class="ext-btn p-3 rounded-xl border border-outline-variant bg-surface-container-low text-center hover:bg-surface-container transition-all" onclick="selectExtension(2, 240000, this)" type="button">
+<span class="block font-headline-sm text-headline-sm text-on-surface">+2 Days</span>
+<span class="text-label-sm text-on-surface-variant font-mono">Rp 240.000</span>
+</button>
+<button class="ext-btn p-3 rounded-xl border border-outline-variant bg-surface-container-low text-center hover:bg-surface-container transition-all" onclick="selectExtension(3, 350000, this)" type="button">
+<span class="block font-headline-sm text-headline-sm text-on-surface">+3 Days</span>
+<span class="text-label-sm text-on-surface-variant font-mono">Rp 350.000</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">New Return Deadline:</span>
+<span class="font-semibold text-primary" id="newDueDate">24 Oct 2024, 18:00 WIB</span>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl text-on-surface font-label-md hover:bg-surface-container" onclick="closeModal('extendModal')">Cancel</button>
+<button class="px-5 py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm" onclick="confirmExtension()">
+          Pay & Confirm
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: LIVE TELEMATICS -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-4" id="telematicsModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-6 shadow-xl space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">sensors</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Vehicle Telematics & Status</h3>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded-lg" onclick="closeModal('telematicsModal')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3 text-body-sm font-body-sm">
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="text-label-sm text-on-surface-variant uppercase">Current Speed</span>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">0 km/h (Parked)</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="text-label-sm text-on-surface-variant uppercase">Battery Voltage</span>
+<div class="font-headline-sm text-headline-sm text-primary mt-1">12.6 V • Healthy</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="text-label-sm text-on-surface-variant uppercase">Odometer</span>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">4,281 km</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<span class="text-label-sm text-on-surface-variant uppercase">GPS Lock Status</span>
+<div class="font-headline-sm text-headline-sm text-secondary mt-1">High Accuracy (14 Sats)</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">lock</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Smart Keyless Ignition</div>
+<div class="text-label-sm text-on-surface-variant">Immobilizer active & ready</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Armed</span>
+</div>
+<div class="flex justify-end pt-2">
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md hover:bg-surface-container-high transition-colors" onclick="closeModal('telematicsModal')">
+          Close
+        </button>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions JavaScript -->
+<script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    let activeFilter = 'all';
+
+    function filterRentals(category, btn) {
+      activeFilter = category;
+      // Update tab active visuals
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.className = 'tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface font-semibold transition-all';
+      });
+      btn.className = 'tab-btn px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all';
+
+      applyFilterAndSearch();
+    }
+
+    function searchRentals() {
+      applyFilterAndSearch();
+    }
+
+    function applyFilterAndSearch() {
+      const query = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.rental-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+
+        const matchesCat = (activeFilter === 'all') || (cat === activeFilter);
+        const matchesQuery = query === '' || searchData.includes(query);
+
+        if (matchesCat && matchesQuery) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const noResults = document.getElementById('noResults');
+      if (noResults) {
+        noResults.classList.toggle('hidden', visibleCount > 0);
+      }
+    }
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      const firstTab = document.querySelector('.tab-btn');
+      if (firstTab) {
+        filterRentals('all', firstTab);
+      }
+    }
+
+    function selectExtension(days, price, element) {
+      document.querySelectorAll('.ext-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-highest', 'border-primary');
+        btn.classList.add('bg-surface-container-low', 'border-outline-variant');
+      });
+      element.classList.remove('bg-surface-container-low', 'border-outline-variant');
+      element.classList.add('bg-surface-container-highest', 'border-primary');
+
+      const targetDay = 23 + days;
+      document.getElementById('newDueDate').innerText = targetDay + ' Oct 2024, 18:00 WIB';
+    }
+
+    function confirmExtension() {
+      closeModal('extendModal');
+      alert('Extension request confirmed! Your rental on #INV-9021 has been extended. Invoice updated in your history.');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-12 mt-16"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex items-center gap-3"><img alt="MotoRent Brand Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCS3erKdrCsLtAwTXafoGxpMzuhwTN4SWsBAtwW-8_XgDRLD4myj5Mez2_Qhhhm1c7nmktDrUY62WDtGUI8s-Y2laB_O4PR-TcxYWZBr-_rntZVnQOxRks9kViP86e7_1Z1KHetKq8EOLHmwfnV-_w7NeE_85aX8rOf12uWlOA3htNT4kQSQKq-HUzjOcUkgGnobr3VsH9lAw-dVvv43BsuMADyVLQiAaEn5OW5fsPZSg"/><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">MotoRent</span><span class="text-body-sm font-body-sm text-on-surface-variant ml-2">© 2024 MotoRent Platform. All rights reserved.</span></div><div class="flex items-center gap-6 font-label-md text-label-md text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="rental-guidelines" href="#">Safety & Insurance</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" href="#">Help Center</a></div></div></footer></body></html>

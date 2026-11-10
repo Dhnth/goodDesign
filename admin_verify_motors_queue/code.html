@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>MotoRent Operations</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","background":"#faf8ff","on-secondary-fixed":"#001d31","tertiary-fixed":"#ffdad7","primary-fixed-dim":"#68dba9","surface-container-highest":"#dae2fd","on-error-container":"#93000a","on-surface-variant":"#3d4a42","inverse-on-surface":"#eef0ff","error-container":"#ffdad6","inverse-surface":"#283044","tertiary-fixed-dim":"#ffb3ae","on-tertiary-fixed":"#410004","on-error":"#ffffff","primary-fixed":"#85f8c4","surface-variant":"#dae2fd","on-primary":"#ffffff","on-background":"#131b2e","on-primary-container":"#f5fff7","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#005137","primary-container":"#00855d","on-tertiary-fixed-variant":"#7f2928","on-tertiary-container":"#fffbff","surface-container-lowest":"#ffffff","tertiary":"#9b3e3b","tertiary-container":"#ba5551","outline-variant":"#bccac0","surface-bright":"#faf8ff","on-surface":"#131b2e","outline":"#6d7a72","on-primary-fixed":"#002114","surface-container-high":"#e2e7ff","secondary-container":"#5bb8fe","surface-tint":"#006c4a","primary":"#006948","on-secondary":"#ffffff","on-secondary-fixed-variant":"#004b73","on-secondary-container":"#00476e","secondary-fixed":"#cce5ff","secondary-fixed-dim":"#93ccff","secondary":"#006398","inverse-primary":"#68dba9","error":"#ba1a1a","surface-container":"#eaedff","on-tertiary":"#ffffff","surface":"#faf8ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","gutter-sm":"1rem","gutter":"1.5rem","space-xl":"2rem","margin-sm":"1rem","space-md":"1rem","space-lg":"1.5rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},fontSize:{"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-xl-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-5"><div class="flex flex-col gap-6"><div class="px-6 flex items-center gap-3"><img alt="MotoRent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCS3erKdrCsLtAwTXafoGxpMzuhwTN4SWsBAtwW-8_XgDRLD4myj5Mez2_Qhhhm1c7nmktDrUY62WDtGUI8s-Y2laB_O4PR-TcxYWZBr-_rntZVnQOxRks9kViP86e7_1Z1KHetKq8EOLHmwfnV-_w7NeE_85aX8rOf12uWlOA3htNT4kQSQKq-HUzjOcUkgGnobr3VsH9lAw-dVvv43BsuMADyVLQiAaEn5OW5fsPZSg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">MotoRent</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Workspace</span></div></div><div class="px-4"><div class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-3 mb-2 font-bold">Admin Console</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 transition-all bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="verify-motors" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Verify Motors</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="manage-bookings" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span>Manage Bookings</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="platform-reports" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span>Reports</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="admin-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="px-4 pt-3"><div class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-3 mb-2 font-bold">Pemilik Portal</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="owner-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Owner Home</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="my-motors" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span>My Motors</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="revenue-report" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span>Revenue Report</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="earnings-payout" href="#"><span class="material-symbols-outlined text-[20px]">payments</span>Earnings Payout</a></nav></div></div><div class="px-4"><div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Admin Superuser</span><span class="font-label-sm text-label-sm text-outline">System Admin</span></div></div><a class="text-on-surface-variant hover:text-error transition-colors p-1" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-xl text-label-sm font-label-sm"><span class="text-outline px-2 text-label-sm font-label-sm">Switch Role:</span><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse-motors" href="#">Penyewa (Customer)</a><a class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-bold" data-path="admin-dashboard" href="#">Admin (Platform)</a><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="owner-dashboard" href="#">Pemilik (Owner)</a></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm font-bold"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Admin Superuser</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/></div></header><main class="w-full pt-16 px-8 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Modal Container for Document Preview -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-4" id="preview-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-2xl w-full p-6 flex flex-col gap-5 relative animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modal-title">Dokumen STNK & Kendaraan</h3>
+<p class="font-label-sm text-label-sm text-outline" id="modal-subtitle">Nomor Berkas: MTR-DOC-98214 - Bali Region</p>
+</div>
+</div>
+<button class="p-2 text-outline hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" id="close-modal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase text-outline">Scan STNK Asli</span>
+<div class="h-48 rounded-xl overflow-hidden bg-surface-container-high relative group">
+<img class="w-full h-full object-cover" data-alt="High-resolution digital scan of official Indonesian vehicle registration certificate STNK document laying flat on sleek desk with official blue stamps and serial numbers in sharp focus" id="modal-img-doc" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_TJqUj8du42AzjXrRvRB_gPnvYp35OG9bNG_J2QCjj9gUzNsdSSFGDG9SfDBDnMtPNRZ1S_zjhvdqyoWtVFMQSh8rx79jUEmuVsv9t7wxu9WdyW20zZj2be-MqIK73ukN3DaueZhyRY9VoHWhVBdCdveAsV1h0RhxXRD5BJBw9Kk88JcjZY7IgWW_2fJT-7pffhYoH5Up3B9RhX-xhCcsYLoNbt_O79bCiCKF4Y0Z"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/80 text-surface-container-lowest px-2 py-0.5 rounded text-[11px] font-mono">STNK Valid s/d 2028</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase text-outline">Foto Unit Fisik (4 Sisi)</span>
+<div class="h-48 rounded-xl overflow-hidden bg-surface-container-high relative group">
+<img class="w-full h-full object-cover" data-alt="Clean front-three-quarter studio angle photograph of modern touring motorcycle parked in illuminated showroom setting showcasing pristine condition" id="modal-img-bike" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWU0CJZ6gn8ehMg_x7__jYAvc7qICmJj7NLoCfoHZEa1rQDlJ_NQQnxL9ujalGA9Rm53WmomY3eqlaWuTDwCINh0M-9KEI0CaNVuHy-XD60S9LvavrXJhUW8suzUDlWCGp9A-5DxWFA6XmHwr25qW5xV_qCTlZI5B1GE9mZ1Qa4SNiGN7MJ88vjVIflOcQftBTUvTj3735ZYV2c7waaZgyfA19sJNuewbYPlA0Tff5"/>
+<div class="absolute bottom-2 left-2 bg-primary text-on-primary px-2 py-0.5 rounded text-[11px] font-semibold">Odometer 12,480 km</div>
+</div>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Hasil Pengecekan Sistem Pajak Samsat Digital:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nomor Rangka & Mesin cocok 100% dengan database Korlantas. Tidak ada riwayat blokir atau tilang ETLE berjalan.</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all" id="modal-reject-btn">
+          Tolak Dokumen
+        </button>
+<button class="px-5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all flex items-center gap-1.5" id="modal-verify-btn">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Verifikasi Sekarang
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Content Container with Polished Spacing -->
+<div class="max-w-[1440px] w-full mx-auto py-8 flex flex-col gap-6">
+<!-- Header Block -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">Motor Verification Desk</span>
+<span class="font-label-sm text-label-sm text-outline">• Regional Denpasar & Badung</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Motorcycle Verification Queue</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+          Review motor documents, STNK, BPKB, and condition photos submitted by owners before listing on catalog.
+        </p>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="flex items-center gap-3">
+<div class="bg-surface-container-lowest px-4 py-2.5 rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Avg. Review Time</div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">14 Menit</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-4 py-2.5 rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Approval Rate</div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">95.4%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filters & Action Bar Card -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-4">
+<!-- Status Tabs with active dot states -->
+<div class="flex items-center gap-2 bg-surface-container-low p-1.5 rounded-xl w-full lg:w-auto overflow-x-auto">
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span>Pending Review</span>
+<span class="bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded-full font-label-sm text-[11px] font-bold">8</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Approved</span>
+<span class="bg-primary/10 text-primary px-1.5 py-0.2 rounded-full font-label-sm text-[11px] font-bold">124</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all whitespace-nowrap">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Rejected</span>
+<span class="bg-error-container text-on-error-container px-1.5 py-0.2 rounded-full font-label-sm text-[11px] font-bold">6</span>
+</button>
+</div>
+<!-- Search & Controls -->
+<div class="flex items-center gap-3 w-full lg:w-auto">
+<div class="relative flex-1 lg:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low focus:bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm rounded-xl outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Cari pemilik, model motor, no polisi..." type="text"/>
+</div>
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Filter</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+<span>Bulk Action</span>
+</button>
+</div>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-6 font-semibold w-12">
+<input class="rounded accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3.5 px-4 font-semibold">Pemilik (Owner)</th>
+<th class="py-3.5 px-4 font-semibold">Brand & Unit Motor</th>
+<th class="py-3.5 px-4 font-semibold">Plat Nomor</th>
+<th class="py-3.5 px-4 font-semibold">Dokumen & Fisik</th>
+<th class="py-3.5 px-4 font-semibold">Tgl Masuk</th>
+<th class="py-3.5 px-6 text-right font-semibold">Tindakan Cepat</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-body-sm font-body-sm">
+<!-- Row 1: Wayan Sudarta -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-6">
+<input class="rounded accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait profile of Balinese male motorcycle owner Wayan Sudarta smiling friendly wearing casual polo shirt with bright clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS-SyyO3NokJbf2WfNQfAZ3BRT0S1p926WvjcG_TDUG63CaGAbcge8H7yGlG4KpQPR8xhqdBYZJF1au-IT-XgPqqDALefOK22Q6MhteyfJcPo6ObEGCClZ4KFCEchpZ6RMBLuWnTZC3n4k8o6gH30FbGoUG5lNleYTsIb6wgUn19czZewwQ82NQuRsO2niQMmnzIUBzecO7LNubZlTA9r_d3UyJBKTW7qV8a3KTDPd"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Wayan Sudarta</span>
+<span class="font-body-sm text-body-sm text-outline">+62 812-3982-1102</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Honda PCX</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">2023</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">160cc • Automatic CVT • Matte Pearl</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<!-- High-contrast Indonesian License Plate Badge -->
+<div class="inline-flex flex-col bg-on-surface text-surface-container-lowest px-3 py-1 rounded-md font-mono text-center shadow-inner tracking-wider">
+<span class="font-bold text-label-lg">DK 3819 FA</span>
+<span class="text-[9px] tracking-widest text-outline-variant font-mono -mt-0.5">08 • 28</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative w-12 h-12 rounded-lg overflow-hidden bg-surface-container-high cursor-pointer preview-trigger" data-bike="Honda PCX 160cc (2023) - DK 3819 FA" data-owner="Wayan Sudarta">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Official Indonesian motorcycle STNK registration paper document photograph showing crisp vehicle details and government verification stamps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAngvQB1EzWrdjSRZ6kdQDt8oWd8hM_LNKq8-QQPxvUhYQMiHxQeNWd0hcZB92i4yemwljXaNOH7MO6rHJQOQZx-NXpXIesg8pNBmUyD9yWeI2b2sSo3RHhNqVrIR_ZWt3v1caUGUuviZy5UdXKMJ966I_dmZbLsHP57xilgyPURqAx4vzG3eCs93k16QBlWpxfXlkn_C1cWmOLnVeiYeY7OKuDDS13Z6_eg7zUSXAC"/>
+<span class="absolute inset-0 bg-inverse-surface/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<button class="preview-trigger text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" data-bike="Honda PCX 160cc (2023) - DK 3819 FA" data-owner="Wayan Sudarta">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Preview Berkas</span>
+</button>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-[10px] font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Verified STNK
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-label-md text-label-md">Hari ini, 09:42</span>
+<span class="text-outline text-label-sm text-label-sm">25 Menit lalu</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-2 rounded-xl bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-all" title="Reject / Catatan">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" title="Verifikasi & Publikasikan">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Verify</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Made Hendra Wijaya -->
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-6">
+<input class="rounded accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait profile of Made Hendra Wijaya Indonesian man wearing light blue button up shirt in casual modern portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd9HCbDRbGgX9IU7rqqiPn9JWRlYeUhv4Sk89wi2AIPMeN_lU3SDje2E6IHJWk0IRjaYgZ6JbqbUqJxy1sB-Dlf1ynOMP85pDq2aH_JvLBQkTL2lpMl4r0qas6BJ8yFu7G1pWjG1DBQeYyRrVRYsvuAHSuWobGdgVLrhXwv56H-Gf_1Dvnind02NX8UxF7DJ5siUC_kuOe0fSafuA9gQRLcTYtW3_4ntJzDesX37Ik"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Made Hendra Wijaya</span>
+<span class="font-body-sm text-body-sm text-outline">+62 821-4451-9988</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Yamaha Aerox Connected</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-[11px] font-bold">2024</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">155cc VVA • Smart Key • Racing Blue</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex flex-col bg-on-surface text-surface-container-lowest px-3 py-1 rounded-md font-mono text-center shadow-inner tracking-wider">
+<span class="font-bold text-label-lg">DK 5902 AB</span>
+<span class="text-[9px] tracking-widest text-outline-variant font-mono -mt-0.5">02 • 29</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative w-12 h-12 rounded-lg overflow-hidden bg-surface-container-high cursor-pointer preview-trigger" data-bike="Yamaha Aerox 155cc Connected (2024) - DK 5902 AB" data-owner="Made Hendra Wijaya">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Close-up photograph of Indonesian BPKB vehicle ownership book and laminated STNK license card side-by-side with official holograms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6vjD7oOB23GQw8QlKsgTkkmSrPFczHvZdFTovlR0RgvipjFms2V03Ni-efJINvFNfVGU_C1oImrJqOWeqpj9T0pGq15vR_ENriEIXQmCQeil0o9WLPzN0x1UO3zJn9mQxhdA83IPlO-Noj6we2VmOfe2kS_dhlmL6O6q2r-_blFJIycBsdsjLLvDNTcSruvP2r-fcyGje2AY1_PY0vdb4Ip_D1irFVaDAQAp4lCBK"/>
+<span class="absolute inset-0 bg-inverse-surface/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<button class="preview-trigger text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" data-bike="Yamaha Aerox 155cc Connected (2024) - DK 5902 AB" data-owner="Made Hendra Wijaya">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Preview Berkas</span>
+</button>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      BPKB + STNK Lengkap
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-label-md text-label-md">Hari ini, 08:15</span>
+<span class="text-outline text-label-sm text-label-sm">2 Jam lalu</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-2 rounded-xl bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-all" title="Reject / Catatan">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" title="Verifikasi & Publikasikan">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Verify</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Siti Rahmawati -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-6">
+<input class="rounded accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of Siti Rahmawati Indonesian woman wearing soft neutral hijab smiling confidently in bright studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPWUsHm3OT73-1Bd9FHxS4T3g42OYDoB0DBcX6BHsU9tZlAGdjlzNgq8979wmoaZa72cjZ7iHGPSXXrzpS56Lyrm-6VFRYmDDykdhQOQ1jh4rirp94Fba5WCaFEWeQeSaUxMwNJ5dtJdS7Lsb8aSZbRbbWIYx_vgSJHaod4LHynTVNSClEOP7y4v6jbRLEPBRBDAfeL2W0C3nTmDb9jnsEUurg2vmC4a4G1t3VD3Aa"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Siti Rahmawati</span>
+<span class="font-body-sm text-body-sm text-outline">+62 819-7720-3341</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Vespa Primavera</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">2022</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">150cc i-get ABS • Mint Green Pastel</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<!-- Jakarta Plate -->
+<div class="inline-flex flex-col bg-on-surface text-surface-container-lowest px-3 py-1 rounded-md font-mono text-center shadow-inner tracking-wider">
+<span class="font-bold text-label-lg">B 4811 TKY</span>
+<span class="text-[9px] tracking-widest text-outline-variant font-mono -mt-0.5">11 • 27</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative w-12 h-12 rounded-lg overflow-hidden bg-surface-container-high cursor-pointer preview-trigger" data-bike="Vespa Primavera 150cc (2022) - B 4811 TKY" data-owner="Siti Rahmawati">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Official vehicle mutasi document and STNK transfer paper showing official seal for vehicle relocation to Bali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW8e8iC7ndVfyCpSTvqMCNrOaVIGJJDQnIurRTEHdz86RRIDsRkQ6nrNz5xcdfdtSsVO57M-z7jQtJtt1_N3ElzQO21s30rhiWfAsm6OLoDWFultbZ-6ixuM7zLALH0c9G2a84LUpyRNDJHkBbWzf27c7wzsi3Lt7Pqna3gXC9mmGTXXo6pnQjGxcKT5AleQTPAtJv6RPsFcUKsVnQPjLPemMv2cA5nMTUXQymwjPW"/>
+<span class="absolute inset-0 bg-inverse-surface/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<button class="preview-trigger text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" data-bike="Vespa Primavera 150cc (2022) - B 4811 TKY" data-owner="Siti Rahmawati">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Preview Berkas</span>
+</button>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                      STNK Bali Transfer
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-label-md text-label-md">Kemarin, 16:30</span>
+<span class="text-outline text-label-sm text-label-sm">18 Jam lalu</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-2 rounded-xl bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-all" title="Reject / Catatan">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" title="Verifikasi & Publikasikan">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Verify</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Ketut Arimbawa -->
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-6">
+<input class="rounded accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait profile of Ketut Arimbawa middle-aged Indonesian motorcycle owner with warm friendly expression against outdoor tropical garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJRlp6zeGdMpOoQfjU9xNdgIE8mF7wbc3d3l1qKi_YZDys-ggdbTkUYdGZXCZKnzaAF2-ltEhSvz9mF-L8up5VSsL7nZaHX1D2ffz9_CVgi-rkLs9wrsZD5QWTLCEHAeh-xQPKqPY1ybBp9qZKEw36U0fwqFIW2DF_ZnudSGpR5S927-Fz-0vonsuaLGYSAPLd4nyDt5zWoZY7eHbLlDBWjUfYP9BMRyjEbb4X5WVM"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Ketut Arimbawa</span>
+<span class="font-body-sm text-body-sm text-outline">+62 878-6019-8824</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Honda Scoopy</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">2023</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">110cc eSP • Prestige White Cream</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex flex-col bg-on-surface text-surface-container-lowest px-3 py-1 rounded-md font-mono text-center shadow-inner tracking-wider">
+<span class="font-bold text-label-lg">DK 2731 OP</span>
+<span class="text-[9px] tracking-widest text-outline-variant font-mono -mt-0.5">05 • 28</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative w-12 h-12 rounded-lg overflow-hidden bg-surface-container-high cursor-pointer preview-trigger" data-bike="Honda Scoopy 110cc (2023) - DK 2731 OP" data-owner="Ketut Arimbawa">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Detailed clear high angle photograph of modern white Honda Scoopy scooter showing perfect chassis condition and clean tires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3D8kCBMhnSUb0OeAvEfIFBPcj6p0mhQDaK4X95_J_wrsAm5-GXUUz_rN4KS-HpXFP4HKto1cxy7HK3x1OneIJ4lIGl15AHXRZVUAcv4jX6tKOzfmJgKEHya-T47oMcgsIzoZJlFq7C_w0GOLCZ9pn32Akrb6dfOo4Jon2MjuNoEDuFli--WMPAaa0eteP88I7ympusRXfB0gQ9qNCJSluBhN-ytsPLaZFbJstjVgV"/>
+<span class="absolute inset-0 bg-inverse-surface/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<button class="preview-trigger text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" data-bike="Honda Scoopy 110cc (2023) - DK 2731 OP" data-owner="Ketut Arimbawa">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Preview Berkas</span>
+</button>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[10px] font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                      Clear Physical Photo
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-label-md text-label-md">Kemarin, 14:10</span>
+<span class="text-outline text-label-sm text-label-sm">20 Jam lalu</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-2 rounded-xl bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-all" title="Reject / Catatan">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" title="Verifikasi & Publikasikan">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Verify</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Brian Aditya -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-4 px-6">
+<input class="rounded accent-primary w-4 h-4 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait profile of Brian Aditya young Indonesian professional biker enthusiast wearing leather jacket in sharp confident indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt7harq3lp8Tnjju0icMweCXxbENNsBIB3eml5wIaul2DfP3LvbgfAL3mPwZ_pZwixLUpBb7uTSsCIobsVcdJo_c2ZR4rHGc5EeuWiyE2v4L5aXlJ8xUokcwNWogDactzSn5aiBw3DckhKYvmPzPduOioQozRkdezKZHX99yYbK8B9MnxIS1-QWg4G8awBh4cmvsQMOKqp9W8JI_47ya9zNgX_AkRZpWhMiwbRWdBL"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Brian Aditya</span>
+<span class="font-body-sm text-body-sm text-outline">+62 856-9118-2045</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Kawasaki Ninja 250</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">2022</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">249cc Twin Cylinder • Lime Green ABS</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex flex-col bg-on-surface text-surface-container-lowest px-3 py-1 rounded-md font-mono text-center shadow-inner tracking-wider">
+<span class="font-bold text-label-lg">B 3349 KLU</span>
+<span class="text-[9px] tracking-widest text-outline-variant font-mono -mt-0.5">10 • 27</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<div class="relative w-12 h-12 rounded-lg overflow-hidden bg-surface-container-high cursor-pointer preview-trigger" data-bike="Kawasaki Ninja 250cc (2022) - B 3349 KLU" data-owner="Brian Aditya">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" data-alt="Clean paper photo of Indonesian motor vehicle tax payment receipt with valid digital QR code and clear stamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwdX5DZpE8MyMv7aeLdUQ_XHIfn2y0Gp422kFAFdzENcJ8H4Wg-EWki0Q-hRLWun_UasXTVYd69VZpqwxq75eYuSouDuH7oYzXd2v2J1DGrSQ6fPzDL8MpOQ3lEEAdnsSvUTgfRPMPVBO-08BdwUp-NRw9FFnSKfhv-b1jy2oM4DWAAhjGWYLKh9vULX0PY849tBKy8UrUCgsBwnpmgsScgTrRVgsXZRqaNZHNW1vg"/>
+<span class="absolute inset-0 bg-inverse-surface/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<button class="preview-trigger text-primary font-label-sm text-label-sm font-semibold hover:underline flex items-center gap-1" data-bike="Kawasaki Ninja 250cc (2022) - B 3349 KLU" data-owner="Brian Aditya">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Preview Berkas</span>
+</button>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-[10px] font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Tax Validation Active
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-label-md text-label-md">24 Okt 2024</span>
+<span class="text-outline text-label-sm text-label-sm">2 Hari lalu</span>
+</div>
+</td>
+<td class="py-4 px-6 text-right">
+<div class="inline-flex items-center gap-2">
+<button class="p-2 rounded-xl bg-surface-container-low hover:bg-error-container text-on-surface-variant hover:text-on-error-container transition-all" title="Reject / Catatan">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" title="Verifikasi & Publikasikan">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Verify</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-4 bg-surface-container-low/40 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline font-label-sm text-label-sm">Menampilkan 5 dari 8 antrean verifikasi motor baru</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-outline font-label-sm text-label-sm cursor-not-allowed opacity-50">
+            Previous
+          </button>
+<span class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold">1</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+            2
+          </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+            Next
+          </button>
+</div>
+</div>
+</div>
+<!-- Verification Guidelines Box -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">policy</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Standar Kelayakan Armada MotoRent</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Pastikan nama pada KTP pemilik cocok dengan STNK atau memiliki surat kuasa bermaterai sah untuk listing pihak ketiga.
+          </p>
+</div>
+</div>
+<a class="px-4 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-2 transition-all whitespace-nowrap" href="#">
+<span>Download SOP Verifikasi</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</a>
+</div>
+</div>
+<script>
+    // Lightweight interaction script for Document Preview modal and quick buttons
+    const modal = document.getElementById('preview-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalSubtitle = document.getElementById('modal-subtitle');
+    const closeModal = document.getElementById('close-modal');
+    const verifyButtons = document.querySelectorAll('button:has(.material-symbols-outlined:contains("check_circle"))');
+
+    document.querySelectorAll('.preview-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        const owner = trigger.getAttribute('data-owner') || 'Wayan Sudarta';
+        const bike = trigger.getAttribute('data-bike') || 'Honda PCX 160cc (2023)';
+        modalTitle.textContent = 'Verifikasi Berkas: ' + bike;
+        modalSubtitle.textContent = 'Pemilik Terdaftar: ' + owner + ' • Dokumen Resmi Samsat';
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.getElementById('modal-verify-btn').addEventListener('click', () => {
+      alert('Dokumen motor berhasil diverifikasi! Unit sekarang tayang pada katalog publik MotoRent.');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    document.getElementById('modal-reject-btn').addEventListener('click', () => {
+      const reason = prompt('Masukkan alasan penolakan berkas (akan dikirimkan via WhatsApp ke pemilik):', 'Foto STNK buram, mohon upload ulang foto halaman pajak dan identitas kendaraan.');
+      if (reason) {
+        alert('Notifikasi penolakan telah diteruskan ke pemilik.');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</div></main></div></body></html>

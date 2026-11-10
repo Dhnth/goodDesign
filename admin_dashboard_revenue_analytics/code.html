@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>MotoRent Operations</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","background":"#faf8ff","on-secondary-fixed":"#001d31","tertiary-fixed":"#ffdad7","primary-fixed-dim":"#68dba9","surface-container-highest":"#dae2fd","on-error-container":"#93000a","on-surface-variant":"#3d4a42","inverse-on-surface":"#eef0ff","error-container":"#ffdad6","inverse-surface":"#283044","tertiary-fixed-dim":"#ffb3ae","on-tertiary-fixed":"#410004","on-error":"#ffffff","primary-fixed":"#85f8c4","surface-variant":"#dae2fd","on-primary":"#ffffff","on-background":"#131b2e","on-primary-container":"#f5fff7","surface-dim":"#d2d9f4","on-primary-fixed-variant":"#005137","primary-container":"#00855d","on-tertiary-fixed-variant":"#7f2928","on-tertiary-container":"#fffbff","surface-container-lowest":"#ffffff","tertiary":"#9b3e3b","tertiary-container":"#ba5551","outline-variant":"#bccac0","surface-bright":"#faf8ff","on-surface":"#131b2e","outline":"#6d7a72","on-primary-fixed":"#002114","surface-container-high":"#e2e7ff","secondary-container":"#5bb8fe","surface-tint":"#006c4a","primary":"#006948","on-secondary":"#ffffff","on-secondary-fixed-variant":"#004b73","on-secondary-container":"#00476e","secondary-fixed":"#cce5ff","secondary-fixed-dim":"#93ccff","secondary":"#006398","inverse-primary":"#68dba9","error":"#ba1a1a","surface-container":"#eaedff","on-tertiary":"#ffffff","surface":"#faf8ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","gutter-sm":"1rem","gutter":"1.5rem","space-xl":"2rem","margin-sm":"1rem","space-md":"1rem","space-lg":"1.5rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-xl":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"headline-lg-mobile":["Inter"]},fontSize:{"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"600"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"headline-xl-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.015em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-5"><div class="flex flex-col gap-6"><div class="px-6 flex items-center gap-3"><img alt="MotoRent Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCS3erKdrCsLtAwTXafoGxpMzuhwTN4SWsBAtwW-8_XgDRLD4myj5Mez2_Qhhhm1c7nmktDrUY62WDtGUI8s-Y2laB_O4PR-TcxYWZBr-_rntZVnQOxRks9kViP86e7_1Z1KHetKq8EOLHmwfnV-_w7NeE_85aX8rOf12uWlOA3htNT4kQSQKq-HUzjOcUkgGnobr3VsH9lAw-dVvv43BsuMADyVLQiAaEn5OW5fsPZSg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">MotoRent</span><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Workspace</span></div></div><div class="px-4"><div class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-3 mb-2 font-bold">Admin Console</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 transition-all bg-primary-container text-on-primary-container font-label-lg rounded-xl" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="verify-motors" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Verify Motors</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="manage-bookings" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span>Manage Bookings</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="platform-reports" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span>Reports</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="admin-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span>Settings</a></nav></div><div class="px-4 pt-3"><div class="text-label-sm font-label-sm uppercase tracking-wider text-outline px-3 mb-2 font-bold">Pemilik Portal</div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-xl"><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="owner-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Owner Home</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="my-motors" href="#"><span class="material-symbols-outlined text-[20px]">two_wheeler</span>My Motors</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="revenue-report" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span>Revenue Report</a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="earnings-payout" href="#"><span class="material-symbols-outlined text-[20px]">payments</span>Earnings Payout</a></nav></div></div><div class="px-4"><div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Admin Superuser</span><span class="font-label-sm text-label-sm text-outline">System Admin</span></div></div><a class="text-on-surface-variant hover:text-error transition-colors p-1" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-xl text-label-sm font-label-sm"><span class="text-outline px-2 text-label-sm font-label-sm">Switch Role:</span><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="browse-motors" href="#">Penyewa (Customer)</a><a class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-bold" data-path="admin-dashboard" href="#">Admin (Platform)</a><a class="px-2.5 py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="owner-dashboard" href="#">Pemilik (Owner)</a></div><div class="flex items-center gap-4"><button aria-label="Notifications" class="p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-xl transition-all relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm font-bold"><span class="w-2 h-2 rounded-full bg-primary"></span><span>Admin Superuser</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyZdR7xs5fMA9pSR1AJaoRkGBQA9onVUbaMhonf6mjVBO_xfbi05DpwLO1lxBbpw_kqTYmAiIukYDg8pNHRlOqMDk66QeNrsQ-Vs4PDd4ZSLoKzPXTymXGnMPUnj9G2AIv7FiuCqMBmu6cL9KpiUguuZP1rojqewGLKqBlgPrF_AWhozpxvFUUVsJQAfOEVz3kbk-VBLg876ns8M2FPbwuuKz6VycOh8r946_TYgW"/></div></header><main class="w-full pt-16 px-8 bg-surface min-h-screen"><div class="flex flex-col w-full pb-12">
+<!-- Top Welcome & Filtering Toolbar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 py-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="inline-flex w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Admin Management Hub</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+        Good morning, Admin Operasional
+      </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time telematics, revenue dispersion, and fleet health metrics.</p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<!-- Search Input -->
+<div class="relative flex items-center min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full pl-9 pr-4 py-2 bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-xl font-body-sm text-body-sm shadow-sm outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search plates, rentals, owners..." type="text"/>
+</div>
+<!-- Date Range Selector Pill -->
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-2 rounded-xl shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-sm text-label-sm font-semibold">Oct 1 - Oct 31, 2024</span>
+<button class="text-outline hover:text-on-surface transition-colors" title="Change date range">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<!-- Action Button -->
+<button class="flex items-center gap-1.5 bg-primary hover:bg-primary-container text-on-primary px-3.5 py-2 rounded-xl font-label-md text-label-md shadow-sm transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Log</span>
+</button>
+</div>
+</div>
+<!-- 4 Key Summary KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-7">
+<!-- Card 1: Registered Motors -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div class="p-2.5 bg-surface-container-low text-primary rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">two_wheeler</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/20 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+          12%
+        </span>
+</div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Registered Motors</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">148 Units</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="text-primary font-medium">+16 bikes</span> vs last 30 days
+        </p>
+</div>
+</div>
+<!-- Card 2: Active Rentals -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div class="p-2.5 bg-surface-container-low text-secondary rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-bold bg-secondary-fixed/40 px-2.5 py-1 rounded-full">
+          88% Rate
+        </span>
+</div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Active Rentals</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">42 Units On Road</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">High weekend demand in South Corridor</p>
+</div>
+</div>
+<!-- Card 3: Total Revenue -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div class="p-2.5 bg-surface-container-low text-primary-container rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/20 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          18.4%
+        </span>
+</div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Gross Booking Volume</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">Rp 184.650.000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Exceeding monthly milestone by 8%</p>
+</div>
+</div>
+<!-- Card 4: Platform Profit Share -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div class="p-2.5 bg-surface-container-low text-secondary-container rounded-xl group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-secondary-container font-semibold bg-secondary-fixed px-2 py-0.5 rounded-md">
+          20% Split
+        </span>
+</div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Admin Profit Share</span>
+<div class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">Rp 36.930.000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Rp 147.720.000 allocated to owners</p>
+</div>
+</div>
+</div>
+<!-- Analytics and Status Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-7">
+<!-- Main Interactive Area Chart (Span 2) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Revenue & Rental Volume per Period</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily gross intake across all regions in October 2024</p>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-xl self-start sm:self-auto">
+<button class="px-3 py-1 bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold rounded-lg shadow-sm">Daily</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">Weekly</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">Monthly</button>
+</div>
+</div>
+<!-- Peak Banner Highlight -->
+<div class="flex items-center justify-between bg-surface-container-low px-4 py-2.5 rounded-xl mb-4 text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">flag</span>
+<span class="font-label-sm text-label-sm font-semibold">Peak Influx Detected</span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oct 21 reached the all-time month peak of <span class="font-bold text-on-surface">Rp 9.800.000</span> (58 checkouts)</span>
+</div>
+<span class="hidden md:inline-flex font-label-sm text-label-sm text-primary font-bold cursor-pointer hover:underline">Inspect Day</span>
+</div>
+<!-- Custom SVG High-Contrast Chart -->
+<div class="relative w-full h-64 pt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 760 220">
+<defs>
+<lineargradient id="primaryGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006948" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#006948" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="secondaryLineGradient" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#006948"></stop>
+<stop offset="68%" stop-color="#00855d"></stop>
+<stop offset="100%" stop-color="#5bb8fe"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Guidelines -->
+<line stroke="#eaedff" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="760" y1="40" y2="40"></line>
+<line stroke="#eaedff" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="760" y1="95" y2="95"></line>
+<line stroke="#eaedff" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="760" y1="150" y2="150"></line>
+<line stroke="#eaedff" stroke-width="1" x1="0" x2="760" y1="205" y2="205"></line>
+<!-- Filled Area Under Curve -->
+<polygon fill="url(#primaryGradient)" points="
+            0,205 
+            0,170 
+            60,165 
+            120,150 
+            180,158 
+            240,130 
+            300,120 
+            360,140 
+            420,95 
+            480,82 
+            540,24 
+            600,85 
+            660,110 
+            720,70 
+            760,65 
+            760,205"></polygon>
+<!-- Main Smooth Metric Line -->
+<polyline fill="none" points="
+            0,170 
+            60,165 
+            120,150 
+            180,158 
+            240,130 
+            300,120 
+            360,140 
+            420,95 
+            480,82 
+            540,24 
+            600,85 
+            660,110 
+            720,70 
+            760,65" stroke="url(#secondaryLineGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Peak Data Marker (Oct 21) -->
+<circle cx="540" cy="24" fill="#006948" r="6" stroke="#ffffff" stroke-width="3"></circle>
+<!-- Tooltip Marker Box -->
+<g transform="translate(480, -20)">
+<rect fill="#131b2e" height="34" rx="8" width="120"></rect>
+<text fill="#faf8ff" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" x="60" y="15">Oct 21: Peak Volume</text>
+<text fill="#68dba9" font-family="Inter" font-size="10" font-weight="700" text-anchor="middle" x="60" y="27">Rp 9.800.000</text>
+</g>
+</svg>
+<!-- Dynamic Timeline Labels -->
+<div class="flex justify-between text-outline font-label-sm text-label-sm pt-3">
+<span>Oct 01</span>
+<span>Oct 06</span>
+<span>Oct 11</span>
+<span>Oct 16</span>
+<span class="text-primary font-bold">Oct 21 (Peak)</span>
+<span>Oct 26</span>
+<span>Oct 31</span>
+</div>
+</div>
+</div>
+<!-- Secondary Card: Fleet Status Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Fleet Status Breakdown</h2>
+<span class="p-1 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">pie_chart</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Current health and deployment state across 148 aggregate units.</p>
+<!-- Fleet Breakdown Meters -->
+<div class="space-y-4">
+<!-- Item 1: Available -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                Available in Garages
+              </span>
+<span class="font-label-md text-label-md font-bold text-on-surface">86 <span class="text-outline font-normal">/ 58%</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 58%"></div>
+</div>
+</div>
+<!-- Item 2: Rented -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                Active on Trip
+              </span>
+<span class="font-label-md text-label-md font-bold text-on-surface">42 <span class="text-outline font-normal">/ 28%</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Item 3: In Service -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+                Scheduled Maintenance
+              </span>
+<span class="font-label-md text-label-md font-bold text-on-surface">12 <span class="text-outline font-normal">/ 8%</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 8%"></div>
+</div>
+</div>
+<!-- Item 4: Pending Review -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+                Pending Verification
+              </span>
+<span class="font-label-md text-label-md font-bold text-error">8 <span class="text-outline font-normal">/ 6%</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 6%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification Alert Box -->
+<div class="mt-6 p-4 rounded-xl bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[22px] shrink-0">pending_actions</span>
+<div class="flex-1">
+<div class="font-label-md text-label-md text-on-surface font-bold">8 Motors Awaiting Approval</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Documents uploaded by owners require compliance & STNK verification.</p>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold mt-2 hover:underline" data-path="verify-motors" href="#">
+<span>Review Registration Queue</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Insights: Live Activity Feed Table -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recent Fleet Activity</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time dispatches, incoming vehicle returns, and pending deposits</p>
+</div>
+<div class="flex items-center gap-2">
+<a class="font-label-md text-label-md text-primary font-bold px-3 py-1.5 rounded-xl hover:bg-surface-container-low transition-colors inline-flex items-center gap-1" data-path="manage-bookings" href="#">
+<span>View All Bookings</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-xl">Rental ID</th>
+<th class="py-3 px-4">Vehicle & Model</th>
+<th class="py-3 px-4">Customer</th>
+<th class="py-3 px-4">Owner Host</th>
+<th class="py-3 px-4">Duration</th>
+<th class="py-3 px-4">Payout / Fee</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4 rounded-r-xl text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">#MR-9042</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-8 rounded-lg object-cover bg-surface-container" data-alt="Matte black modern Honda PCX 160cc scooter parked against clean studio architectural lighting, automotive rental showcase" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2A7V3HKZ5WFcKF8NtfHx9Q7PV0ctvWtPKAyBD3B3jGVQug0DfPL6cVz5Xym3NTrndjNiJ3gcHwsYQtrddN1nCCy0DUnVqvsAmnY0NCp1KI7KfRrNn48lz1uTaILdOJY8pVx7lgdQpZCKos62ZXOtjnzDaTp2O-q9uy2Rc6S9vP2MCVFP1bGEi0g4YHJPTW4ClTJ5jsMHcX6Q2cK3UNqaVIeDDDIA9rdEpRAVJPqzT"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Honda PCX 160cc</div>
+<div class="text-outline font-label-sm text-label-sm">B 4829 TXL • Automatic</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md">Rian Setiawan</div>
+<div class="text-outline font-label-sm text-label-sm">KTP Verified</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md">Garasi Sentosa</span>
+</td>
+<td class="py-3.5 px-4">
+<div>3 Days</div>
+<div class="text-outline font-label-sm text-label-sm">Return: Today, 18:00</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold">Rp 450.000</div>
+<div class="text-primary font-label-sm text-label-sm font-semibold">Share: Rp 90.000</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed/40 text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                On Trip
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded-lg transition-colors" title="View details">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">#MR-9041</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-8 rounded-lg object-cover bg-surface-container" data-alt="Glossy dark metallic Yamaha NMAX 155cc maxiscooter ready for touring on sleek minimalist highway background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWCk38KFUw6OEhpleTmPanokEbHWPAEvV3GboqNzLYQCLjEc1SHqPD91cNjtRWInqfqXPMAKpZIPZZfJ4dSrEyaqLxs9me5pXwGum92wxK-iKnGuktBMGDxvyKqGnceEopNLruQoLbnljMUCMzp77qPK-2uG9rxifZe5FSqJSjZp9yIaj3pJwM3G7S-WWcbuOXmhOzSuHpz1j8et3IvaN83wxrU0zCDukWDi_HmuXr"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Yamaha NMAX 155</div>
+<div class="text-outline font-label-sm text-label-sm">DK 3110 FAE • ABS</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md">Sarah Jenkins</div>
+<div class="text-outline font-label-sm text-label-sm">Passport Verified</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md">Dewata Moto Rental</span>
+</td>
+<td class="py-3.5 px-4">
+<div>7 Days</div>
+<div class="text-outline font-label-sm text-label-sm">Ends Oct 28</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold">Rp 1.120.000</div>
+<div class="text-primary font-label-sm text-label-sm font-semibold">Share: Rp 224.000</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed/40 text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                On Trip
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded-lg transition-colors" title="View details">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">#MR-9039</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-8 rounded-lg object-cover bg-surface-container" data-alt="Retro styled mint green Honda Scoopy scooter parked in front of urban cafe, clean technical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWUI2x3AZimq_Mmj8GAFtn9w4mIpUai9-2sj7284Y4HROv7TlqkV0SjAqQaGqgI2XeO5pLnSIEOTc7D5oI3zm9cAYpPVeugV8xxNVbP6cj40yEwEuEAvzxRXpnF5tT1KGD1kFlwIG4S9raOE3JoUDn3JUuLaar9HSy4rWBhQMoVUiyrEJB3sTo30p_t0mLLfo269J6PAsB-KBkA6mP13yiBZl76UfvXSRkHRzEUmQ0"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Honda Scoopy Prestige</div>
+<div class="text-outline font-label-sm text-label-sm">B 6542 WQL • Keyless</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md">Dimas Anggara</div>
+<div class="text-outline font-label-sm text-label-sm">KTP Verified</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md">Cahaya Motor Kemang</span>
+</td>
+<td class="py-3.5 px-4">
+<div>1 Day</div>
+<div class="text-primary font-label-sm text-label-sm font-semibold">Returned at 11:20</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold">Rp 120.000</div>
+<div class="text-primary font-label-sm text-label-sm font-semibold">Share: Rp 24.000</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed/20 text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Completed
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded-lg transition-colors" title="View details">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-md text-label-md font-bold text-primary">#MR-9038</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-8 rounded-lg object-cover bg-surface-container" data-alt="Aggressive streetfighter Kawasaki Ninja ZX-25R 4-cylinder sportbike in lime green and black livery on concrete paddock" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGGr-63vnybmLTXaFDl-1B0ttPjECHQk1RD3_voGLhbDO4125KgvR1dPycSyA9JGNkxE-LRdPs5Z-Pc6qosG0LX6Gg-kMOYPn7Ca02C3DA2mpap827lolRqW9_Os4I_a0Y9MP3iy0wm3QEd7oMiHiaMqgQVbqNwi4gD0WCO3JR-IyC6vwsf0OEZ4l4KY1qKYtpDFlfhyMYnGpAq5AZt3eEOUMAdwhtHC4qmIK_rTNa"/>
+<div>
+<div class="font-label-md text-label-md font-bold">Kawasaki ZX-25R</div>
+<div class="text-outline font-label-sm text-label-sm">B 3001 PXR • Sport 250cc</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md">Kevin Pratama</div>
+<div class="text-outline font-label-sm text-label-sm">SIM C Verified</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="font-label-md text-label-md">Superbike Garage BSD</span>
+</td>
+<td class="py-3.5 px-4">
+<div>2 Days</div>
+<div class="text-outline font-label-sm text-label-sm">Starts Tomorrow</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-bold">Rp 900.000</div>
+<div class="text-primary font-label-sm text-label-sm font-semibold">Share: Rp 180.000</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Confirmed
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary rounded-lg transition-colors" title="View details">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination Navigation -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 mt-2">
+<div class="font-label-sm text-label-sm text-outline">
+        Showing <span class="font-bold text-on-surface">4</span> of <span class="font-bold text-on-surface">42</span> active operations today
+      </div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm">Previous</button>
+<button class="w-7 h-7 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">1</button>
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center transition-colors">2</button>
+<button class="w-7 h-7 rounded-lg hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center transition-colors">3</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm">Next</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
